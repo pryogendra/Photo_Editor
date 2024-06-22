@@ -1,0 +1,19 @@
+<Chooser_Root>
+    id:chooser
+    BoxLayout:
+        id:box_layout
+        size:root.width,root.height
+        orientation:"vertical"
+        Image:
+            id:img
+            source:'Images/background.png'
+            allow_stretch:True
+            keep_ratio:False
+            BoxLayout:
+                size:root.width,root.height
+                orientation:"vertical"
+                padding:30
+                spacing:20
+                FileChooserIconView:
+                    id:file
+                    on_selection: chooser.selected(file.selection)

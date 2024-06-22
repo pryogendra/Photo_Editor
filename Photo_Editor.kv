@@ -1,0 +1,98 @@
+<Root>
+    MDBoxLayout:
+        size:root.size
+        orientation:'vertical'
+        MDBoxLayout:
+            size_hint:1,.05
+            spacing:5
+            #MDFlatButton:
+            #    size_hint:.1,.5
+            #    text:'Live'
+            #    id:A1
+            #    on_release:root.A1()
+            MDFlatButton:
+                size_hint:.1,.5
+                text:'Blur'
+                id:A2
+                on_release:root.A2()
+            MDFlatButton:
+                size_hint:.1,.5
+                text:'Zero Threshold'
+                id:A3
+                on_release:root.A3()
+            MDFlatButton:
+                text:'Binary Threshold'
+                size_hint:.1,.5
+                id:A4
+                on_release:root.A4()
+            MDFlatButton:
+                text:'Canny Edge'
+                size_hint:.1,.5
+                id:A5
+                on_release:root.A5()
+            MDFlatButton:
+                text:'Gradient'
+                size_hint:.1,.5
+                id:A6
+                on_release:root.A6()
+            #MDFlatButton:
+            #    text:'Mask'
+            #    size_hint:.1,.5
+            #    id:A7
+            #    on_release:root.A7()
+            MDFlatButton:
+                text:'Split(RGB)'
+                size_hint:.1,.5
+                id:A8
+                on_release:root.A8()
+            MDFlatButton:
+                text:'GrayScale'
+                size_hint:.1,.5
+                id:A9
+                on_release:root.A9()
+
+        MDBoxLayout:
+            #size:root.size
+            spacing:5
+            padding:5
+            orientation:'horizontal'
+            Image:
+                id:real_img
+                source:'Images/rose.jpeg'
+                allow_stretch:True
+                keep_ratio :True
+                StackLayout:
+                    size:root.size
+                    orientation:'lr-bt'
+                    padding:10
+                    spacing:5
+                    MDRectangleFlatButton:
+                        text:'Import Image'
+                        #pos_hint:{'center_x':1,'top':1}
+                        on_release:app.File_Chooser()
+                    #MDRectangleFlatButton:
+                    #    text:'Live'
+                    #    on_release:root.Live_Image()
+            Slider:
+                id:slider
+                min:1
+                max:255
+                step:2
+                color:1,0,1,0
+                size_hint:.06,1
+                padding:20
+                orientation:'vertical'
+                on_value:root.Slided(*args)
+            Image:
+                id:temp_img
+                source:''
+                allow_stretch:True
+                keep_ratio :True
+                StackLayout:
+                    size:root.size
+                    orientation:'rl-bt'
+                    padding:10
+                    MDRectangleFlatButton:
+                        text:'Save Image'
+                        #pos_hint:{'center_x':1,'top':1}
+                        on_release:root.show_dialog()

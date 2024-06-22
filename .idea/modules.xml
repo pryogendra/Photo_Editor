@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../KivyMD Tutorial/.idea/KivyMD Tutorial.iml" filepath="$PROJECT_DIR$/../KivyMD Tutorial/.idea/KivyMD Tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Kivy_Tutorials/.idea/Kivy_Tutorials.iml" filepath="$PROJECT_DIR$/../Kivy_Tutorials/.idea/Kivy_Tutorials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../OpenCV/.idea/OpenCV.iml" filepath="$PROJECT_DIR$/../OpenCV/.idea/OpenCV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Photo_Editor.iml" filepath="$PROJECT_DIR$/.idea/Photo_Editor.iml" />
+    </modules>
+  </component>
+</project>
